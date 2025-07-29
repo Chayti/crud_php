@@ -1,6 +1,6 @@
 <?php
-include 'db.php';
-$id = $_GET['id'];
-$conn->query("DELETE FROM users WHERE id=$id");
-header("Location: index.php");
+include 'db.php'; // Connect to DB
+$id = $_GET['id'];  // Get user ID from URL
+$conn->query("DELETE FROM users WHERE id=$id"); // Run delete SQL
+header("Location: index.php"); // Redirect to user list
 ?>

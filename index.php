@@ -1,4 +1,4 @@
-<?php include 'db.php'; ?>
+<?php include 'db.php'; ?> // Connect to DB
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,8 +17,8 @@
   <table border="1">
     <tr><th>ID</th><th>Name</th><th>Email</th><th>Actions</th></tr>
     <?php
-    $result = $conn->query("SELECT * FROM users");
-    while ($row = $result->fetch_assoc()) {
+    $result = $conn->query("SELECT * FROM users"); // Get all users
+    while ($row = $result->fetch_assoc()) { // Loop through results
       echo "<tr>
               <td>{$row['id']}</td>
               <td>{$row['name']}</td>

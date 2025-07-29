@@ -1,10 +1,10 @@
-<?php include 'db.php';
+<?php include 'db.php'; // Reuse database connection
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $conn->query("INSERT INTO users (name, email) VALUES ('$name', '$email')");
-  header("Location: index.php");
+if ($_SERVER["REQUEST_METHOD"] == "POST") { // Check if form is submitted
+  $name = $_POST['name']; // Get name from form
+  $email = $_POST['email']; // Get email from form
+  $conn->query("INSERT INTO users (name, email) VALUES ('$name', '$email')"); // SQL insert command
+  header("Location: index.php"); // Redirect to user list after insert
 }
 ?>
 
